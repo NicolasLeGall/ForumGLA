@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ForumGLA</display-name>
+	
+	<servlet>
+        <servlet-name>reponse_traitement</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.Reponse_traitementServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>reponse_traitement</servlet-name>
+	    <url-pattern>/reponse_traitement</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+        <servlet-name>reponse</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.ReponseServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>reponse</servlet-name>
+	    <url-pattern>/reponse</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>fil</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.FilServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+        <servlet-name>fil</servlet-name>
+	    <url-pattern>/fil</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>authentification</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.AuthentificationServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>authentification</servlet-name>
+	    <url-pattern>/authentification</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>accueil</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.AccueilServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>accueil</servlet-name>
+	    <url-pattern>/accueil</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+        <servlet-name>resetDatabase</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.ResetDatabaseServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>resetDatabase</servlet-name>
+	    <url-pattern>/resetDatabase</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+        <servlet-name>profil</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.ProfilServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>profil</servlet-name>
+	    <url-pattern>/profil</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.UploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>upload</servlet-name>
+	    <url-pattern>/upload</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>suppr_reponse</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.Suppr_reponseServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>suppr_reponse</servlet-name>
+	    <url-pattern>/suppr_reponse</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>suppr_fil</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.Suppr_filServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>suppr_fil</servlet-name>
+	    <url-pattern>/suppr_fil</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>creerDiscussion</servlet-name>
+        <servlet-class>fr.istic.gla.tp.servlet.CreerDiscussionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+        <servlet-name>creerDiscussion</servlet-name>
+	    <url-pattern>/creerDiscussion</url-pattern>
+	</servlet-mapping>
+	
+	
+
+	
+	
+	<filter>
+		<filter-name>RestrictionFilter</filter-name>
+		<filter-class>fr.istic.gla.tp.servlet.RestrictionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>RestrictionFilter</filter-name>
+		<url-pattern>/reponse</url-pattern>
+		<url-pattern>/profil</url-pattern>
+		<url-pattern>/resetDatabase</url-pattern>
+		<url-pattern>/creerDiscussion</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>RestrictionFilterAdminOper</filter-name>
+		<filter-class>fr.istic.gla.tp.servlet.RestrictionFilterAdminOper</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>RestrictionFilterAdminOper</filter-name>
+		<url-pattern>/suppr_fil</url-pattern>
+		<url-pattern>/suppr_reponse</url-pattern>
+	</filter-mapping>
+
+</web-app>
+
+
+
+
+
+
+
